@@ -19,7 +19,7 @@ x_ = np.random.rand(256, 256, 70, 70).astype(theano.config.floatX)
 y_ = f(x_)
 f.sync_shared()
 t0 = time.time()
-for i in range(3):
+for i in range(10):
     print i
     y_ = f(x_)
     f.sync_shared()
