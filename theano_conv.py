@@ -5,7 +5,7 @@ import time
 
 x = T.tensor4('x')
 filters = theano.shared(
-    np.random.rand(256, 128, 3, 3).astype(theano.config.floatX),
+    np.random.rand(256, 128, 8, 8).astype(theano.config.floatX),
     'filters')
 # B x 1 x 1 x T
 y = theano.gpuarray.dnn.dnn_conv(
